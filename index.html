@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Próximamente · Coro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f1a1f;
+      --fg: #f2f4f6;
+      --muted: #c5ccd3;
+      --accent: #e6c07b;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, sans-serif;
+      color: var(--fg);
+      background: url('fondo.jpg') center/cover no-repeat;
+      overflow: hidden;
+    }
+
+    /* HERO ANIMADO – ONDAS SONORAS */
+    .hero {
+      position: relative;
+      height: 100%;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 32px;
+      background: rgba(15, 26, 31, 0.7);
+    }
+
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: -20%;
+      background: radial-gradient(circle at center, rgba(230,192,123,.25), transparent 60%);
+      animation: pulse 12s ease-in-out infinite;
+      z-index: 0;
+    }
+
+    .hero::after {
+      animation-delay: -6s;
+      opacity: .6;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: .6; }
+      50% { transform: scale(1.2); opacity: .9; }
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      max-width: 640px;
+      display: grid;
+      gap: 24px;
+      justify-items: center;
+    }
+
+    /* LOGO PLACEHOLDER */
+    .logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+    }
+
+    .logo img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    h1 {
+      font-family: Playfair Display, serif;
+      font-size: clamp(36px, 6vw, 56px);
+      margin: 0;
+    }
+
+    p {
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    a.instagram {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      color: var(--fg);
+      font-weight: 600;
+      padding: 12px 20px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.3);
+      transition: background .3s, color .3s;
+    }
+
+    a.instagram:hover {
+      background: var(--accent);
+      color: #1b1b1b;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 16px;
+      width: 100%;
+      text-align: center;
+      font-size: 12px;
+      color: var(--muted);
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <div class="content">
+      <div class="logo">
+        <img src="logoAncoramain.png" alt="Logo Ancora">
+      </div>
+      <h1>Próximamente</h1>
+      <p>
+        Estamos preparando un nuevo espacio para <b>Ancora grupo vocal</b>.
+        Voces que se unen, música que respira.
+      </p>
+      <a class="instagram" href="https://www.instagram.com/ancoragrupovocal/" target="_blank" rel="noopener">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+        </svg>
+        Seguir en Instagram
+      </a>
+    </div>
+    <footer>© 2025 · Ancora grupo vocal</footer>
+  </section>
+</body>
+</html>
